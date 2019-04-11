@@ -1,5 +1,4 @@
 include .env
-include .env.network
 export $(shell sed 's/=.*//' .env)
 export $(shell sed 's/=.*//' .env.network)
 

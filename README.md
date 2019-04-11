@@ -8,6 +8,8 @@ There is a new branch for each state of the project. Just to show the progressio
 
 The make file should have everything needed. If there is a problem with the compilation, than usually you can figure that out by going into the directory that is giving you problems and building in there with a simple `mix compile`.
 
+You will also want to create a .env file. A sample one is included. Just rename .env.sample and change the network values as well as the build target and you should be good to go.
+
 ### Prerequisites
 
 * nerves_bootstrap

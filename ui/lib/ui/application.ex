@@ -8,10 +8,11 @@ defmodule Ui.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Start the endpoint when the application starts
-      UiWeb.Endpoint
       # Starts a worker by calling: Ui.Worker.start_link(arg)
       # {Ui.Worker, arg},
+      # {Status.Storage, name: Status.Storage},
+      # Start the endpoint when the application starts
+      UiWeb.Endpoint
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

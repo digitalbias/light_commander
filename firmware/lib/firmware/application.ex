@@ -14,18 +14,9 @@ defmodule Firmware.Application do
     Supervisor.start_link(children(@target), opts)
   end
 
-  # List all child processes to be supervised
-  def children("host") do
-    [
-      # Starts a worker by calling: Firmware.Worker.start_link(arg)
-      # {Firmware.Worker, arg},
-    ]
-  end
-
   def children(_target) do
     [
-      # Starts a worker by calling: Firmware.Worker.start_link(arg)
-      # {Firmware.Worker, arg},
+      {Status.Storage, name: Status.Storage}
     ]
   end
 end

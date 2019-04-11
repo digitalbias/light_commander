@@ -20,7 +20,9 @@ defmodule UiWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", UiWeb do
-  #   pipe_through :api
-  # end
+  scope "/api/v1", UiWeb do
+    pipe_through :api
+
+    resources "/statuses",  StatusController, except: [:new, :edit, :update, :delete]
+  end
 end

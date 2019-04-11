@@ -50,6 +50,7 @@ defmodule Firmware.MixProject do
     [
       {:nerves_runtime, "~> 0.6"},
       {:nerves_init_gadget, "~> 0.5"},
+      {:ui, path: "../ui"},
       {:lights, path: "../lights"}
     ] ++ system(target)
   end

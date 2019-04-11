@@ -5,19 +5,19 @@ import json
 import bluetooth
 import time
 
-print "In/Out Board"
+print("In/Out Board")
 
-host = '192.168.8.197:4000'
-# host = '192.168.8.222'
+# host = '192.168.8.197:4000'
+host = '192.168.8.222'
 
 person_dictonary = {
-    "Dave": "74:B5:87:33:33:33,
+    "Dave": "74:B5:87:33:33:33",
     "Amy": "24:F0:94:33:33:33",
     # "Emily": "",
-    # "Ben": "",
-    "Adam": "08:74:02:6F:33:33:33"
-    # "Laura": "",
-    # "Afton": ""
+    "Ben": "F0:DB:E2:33:33:33",
+    "Adam": "08:74:02:33:33:33",
+    "Laura": "30:10:E4:33:33:33",
+    "Afton": "AC:BC:32:33:33:33"
 }
 
 def send_status_to_server(name, status):
@@ -26,10 +26,10 @@ def send_status_to_server(name, status):
 
     req = urllib2.Request(url)
     req.add_header('Content-Type', 'application/json')
-    response = urllib2.urlopen(req, json.dumps(data))
+    urllib2.urlopen(req, json.dumps(data))
 
 while True:
-    print "Checking " + time.strftime("%a, %d %b %Y %H:%M:%S", time.gmtime())
+    print("Checking " + time.strftime("%a, %d %b %Y %H:%M:%S", time.gmtime()))
 
     for key, value in person_dictonary.items():
         result = bluetooth.lookup_name(value, timeout=5)

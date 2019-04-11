@@ -1,0 +1,5 @@
+/.env
+/.env.network
+.DS_Store
+/firmware/mix.lock.*
+/.vscode

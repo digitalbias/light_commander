@@ -2,11 +2,11 @@
 
 The idea behind this project is to create a Raspberry PI device that controls a strand of WS2182B LEDs and allow it to be configured via a web interface. It is a basic poncho project. You can read more about [Poncho Projects] and see the [example] used for this project as well.
 
-There is a new branch for each state of the project. Just to show the progression of how this app was created. They are numbered in order that I did them. It starts with the master branch and then builds up from there.
+There is a new branch for each state of the project. Just to show the progression of how this app was created. They are numbered in order that I did them. It starts with the `0_getting_started` branch and builds up from there.
 
 ## Building
 
-
+The make file should have everything needed. If there is a problem with the compilation, than usually you can figure that out by going into the directory that is giving you problems and building in there with a simple `mix compile`.
 
 ### Prerequisites
 

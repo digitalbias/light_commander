@@ -36,6 +36,8 @@ config :nerves_network, :default,
     ipv4_address_method: :dhcp
   ]
 
+import_config "../../lights/config/config.exs"
+
 # Authorize the device to receive firmware using your public key.
 # See https://hexdocs.pm/nerves_firmware_ssh/readme.html for more information
 # on configuring nerves_firmware_ssh.

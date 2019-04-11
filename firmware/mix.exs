@@ -49,7 +49,8 @@ defmodule Firmware.MixProject do
   defp deps(target) do
     [
       {:nerves_runtime, "~> 0.6"},
-      {:nerves_init_gadget, "~> 0.5"}
+      {:nerves_init_gadget, "~> 0.5"},
+      {:lights, path: "../lights"}
     ] ++ system(target)
   end
 

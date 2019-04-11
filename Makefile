@@ -6,6 +6,7 @@ export $(shell sed 's/=.*//' .env.network)
 default: build
 
 build:
+	cd lights; mix deps.get
 	cd firmware; mix deps.get; mix firmware
 
 burn:
